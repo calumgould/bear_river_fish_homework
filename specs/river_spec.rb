@@ -14,6 +14,10 @@ class TestRiver < Minitest::Test
     @river = River.new("Amazon")
   end
 
+  def test_river_name
+    assert_equal("Amazon", @river.name)
+  end
+
   def test_amount_of_fish_in_river
     assert_equal(50, @river.total_fish())
   end
@@ -23,6 +27,15 @@ class TestRiver < Minitest::Test
     assert_equal(49, @river.total_fish())
   end
 
+  def test_add_fish_to_river
+    @river.add_fish_to_river(50)
+    assert_equal(100, @river.total_fish)
+  end
+
+  def test_bear_changes_river
+    @river.bear_moves_river("Nile")
+    assert_equal("Nile", @river.name)
+  end
 
 
 

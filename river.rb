@@ -1,5 +1,7 @@
 class River
 
+  attr_reader :name
+
   def initialize(name)
     @name = name
     @amount_of_fish = 50
@@ -13,12 +15,13 @@ class River
     return @amount_of_fish -= amount
   end
 
+  def add_fish_to_river(amount)
+    return @amount_of_fish += amount
+  end
 
-
-
-
-
-
+  def bear_moves_river(new_location)
+    @name = new_location
+  end
 
 
 

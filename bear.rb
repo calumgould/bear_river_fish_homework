@@ -1,5 +1,7 @@
 class Bear
 
+  attr_reader :name, :type
+
   def initialize(name, type)
     @name = name
     @type = type
@@ -17,7 +19,6 @@ class Bear
   def bear_makes_a_sound(sound)
     return sound
   end
-
 
 
 
